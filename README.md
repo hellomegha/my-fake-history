@@ -23,8 +23,8 @@ cd my-fake-history
 git init
 
 # Generate commit history for a specific date range.
-# The date must be in `YY/MM/DD` format. Example `2019/01/01`
-fake-git-history --startDate <YY/MM/DD> --endDate <YY/MM/DD>
+# The date must be in `yyyy/MM/dd` format. Example `2019/01/01`
+fake-git-history --startDate <yyyy/MM/dd> --endDate <yyyy/MM/dd>
 ```
 
 Then create [a private repository](https://github.com/new) on GitHub,
@@ -43,19 +43,19 @@ Specify how many commits should be created for every single day.
 Default is `0,3` which means it will randomly create from 0 to 3 commit messages for a day.
 
 ```shell script
-fake-git-history --commitsPerDay "1,5" -s <YY/MM/DD> -e <YY/MM/DD>
+fake-git-history --commitsPerDay "1,5" -s <yyyy/MM/dd> -e <yyyy/MM/dd>
 ```
 
 Generate commit history for weekdays only.
 
 ```shell script
-fake-git-history --workdaysOnly -s <YY/MM/DD> -e <YY/MM/DD>
+fake-git-history --workdaysOnly -s <yyyy/MM/dd> -e <yyyy/MM/dd>
 ```
 
 ## CLI
 
-- `--startDate` or `-s` Start date in YY/MM/DD format.
-- `--endDate`, `-e` End date in YY/MM/DD format.
+- `--startDate` or `-s` Start date in yyyy/MM/dd format.
+- `--endDate`, `-e` End date in yyyy/MM/dd format.
 - `--workdaysOnly`, `-w` Skip weekends.
 - `--commitsPerDay`, `-c` The number of commits to generate for every single day.
 
